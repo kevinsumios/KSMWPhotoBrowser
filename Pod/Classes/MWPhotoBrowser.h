@@ -53,6 +53,10 @@
 @property (nonatomic) NSUInteger delayToHideElements;
 @property (nonatomic, readonly) NSUInteger currentIndex;
 
+//redeclaire the private property, for customization by Kevin
+@property (nonatomic, readwrite, retain) UIToolbar *toolbar;
+@property (nonatomic, readwrite, retain) NSMutableArray *photos;
+
 // Customise image selection icons as they are the only icons with a colour tint
 // Icon should be located in the app's main bundle
 @property (nonatomic, strong) NSString *customImageSelectedIconName;
