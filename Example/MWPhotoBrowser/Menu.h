@@ -7,10 +7,10 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "MWPhotoBrowser.h"
+#import "KSPhotoBrowser.h"
 #import <AssetsLibrary/AssetsLibrary.h>
 
-@interface Menu : UITableViewController <MWPhotoBrowserDelegate> {
+@interface Menu : UITableViewController <KSPhotoBrowserDelegate> {
     UISegmentedControl *_segmentedControl;
     NSMutableArray *_selections;
 }

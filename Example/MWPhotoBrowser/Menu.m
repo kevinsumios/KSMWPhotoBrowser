@@ -170,6 +170,7 @@
 	NSMutableArray *thumbs = [[NSMutableArray alloc] init];
     MWPhoto *photo, *thumb;
     BOOL displayActionButton = YES;
+    BOOL displayTrashButton = YES;
     BOOL displaySelectionButtons = NO;
     BOOL displayNavArrows = NO;
     BOOL enableGrid = YES;
@@ -1113,8 +1114,9 @@
     self.thumbs = thumbs;
 	
 	// Create browser
-	MWPhotoBrowser *browser = [[MWPhotoBrowser alloc] initWithDelegate:self];
+    KSPhotoBrowser *browser = [[KSPhotoBrowser alloc] initWithDelegate:self];
     browser.displayActionButton = displayActionButton;
+    browser.displayTrashButton = displayTrashButton;
     browser.displayNavArrows = displayNavArrows;
     browser.displaySelectionButtons = displaySelectionButtons;
     browser.alwaysShowControls = displaySelectionButtons;
@@ -1181,7 +1183,13 @@
 
 }
 
-#pragma mark - MWPhotoBrowserDelegate
+#pragma mark - KSPhotoBrowserDelegate
+
+- (void)ksPhotoBrowser:(KSPhotoBrowser *)photoBrowser trashButtonPressedForPhotoAtIndex:(NSUInteger)index {
+    UIAlertController *alert = [UIAlertController alertControllerWithTitle:@"Trash button click!" message:[NSString stringWithFormat:@"index: %lu", index] preferredStyle:UIAlertControllerStyleAlert];
+    [alert addAction:[UIAlertAction actionWithTitle:@"cancel" style:UIAlertActionStyleCancel handler:nil]];
+    [self presentViewController:alert animated:true completion:nil];
+}
 
 - (NSUInteger)numberOfPhotosInPhotoBrowser:(MWPhotoBrowser *)photoBrowser {
     return _photos.count;
