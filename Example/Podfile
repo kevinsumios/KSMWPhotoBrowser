@@ -2,14 +2,14 @@ source 'https://github.com/CocoaPods/Specs.git'
 
 target 'MWPhotoBrowser_Example' do
     pod 'KSPhotoBrowser', :path => '../'
-    pod 'SDWebImage', '~> 3.8.1'
+    pod 'SDWebImage'
 end
 
 target 'MWPhotoBrowser_Tests' do
     use_frameworks!
     pod 'KSPhotoBrowser', :path => '../'
     
-    pod 'SDWebImage', '~> 3.8.1'
+    pod 'SDWebImage'
     pod 'Specta'
     pod 'Expecta'
     pod 'FBSnapshotTestCase'
