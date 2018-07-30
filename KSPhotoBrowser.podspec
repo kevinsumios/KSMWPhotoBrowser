@@ -13,12 +13,12 @@ Pod::Spec.new do |s|
                   Photos can be zoomed and panned, and optional (customisable) captions can be displayed.
                   DESCRIPTION
   s.screenshots = [
-    'Screenshots/MWPhotoBrowser1.png',
-    'Screenshots/MWPhotoBrowser2.png',
-    'Screenshots/MWPhotoBrowser3.png',
-    'Screenshots/MWPhotoBrowser4.png',
-    'Screenshots/MWPhotoBrowser5.png',
-    'Screenshots/MWPhotoBrowser6.png'
+    'https://raw.githubusercontent.com/kevinsumios/KSPhotoBrowser/master/Screenshots/MWPhotoBrowser1.png',
+    'https://raw.githubusercontent.com/kevinsumios/KSPhotoBrowser/master/Screenshots/MWPhotoBrowser2.png',
+    'https://raw.githubusercontent.com/kevinsumios/KSPhotoBrowser/master/Screenshots/MWPhotoBrowser3.png',
+    'https://raw.githubusercontent.com/kevinsumios/KSPhotoBrowser/master/Screenshots/MWPhotoBrowser4.png',
+    'https://raw.githubusercontent.com/kevinsumios/KSPhotoBrowser/master/Screenshots/MWPhotoBrowser5.png',
+    'https://raw.githubusercontent.com/kevinsumios/KSPhotoBrowser/master/Screenshots/MWPhotoBrowser6.png'
   ]
 
   s.homepage = 'https://github.com/kevinsumios/KSPhotoBrowser'
@@ -28,7 +28,7 @@ Pod::Spec.new do |s|
     :git => 'https://github.com/kevinsumios/KSPhotoBrowser.git',
     :tag => '1.0.0'
   }
-  s.platform = :ios, '7.0'
+  s.platform = :ios, '8.0'
   s.source_files = 'Pod/Classes/**/*'
   s.resource_bundles = {
     'KSPhotoBrowser' => ['Pod/Assets/*.png']
