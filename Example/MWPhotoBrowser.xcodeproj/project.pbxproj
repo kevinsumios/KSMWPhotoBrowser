@@ -79,7 +79,7 @@
 		4C18E1181B47E72800E3D63A /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		4C18E1191B47E72800E3D63A /* Menu.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Menu.h; sourceTree = "<group>"; };
 		4C18E11A1B47E72800E3D63A /* Menu.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Menu.m; sourceTree = "<group>"; };
-		4E0A14EFB687307A0833E979 /* KSPhotoBrowser.podspec */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = KSPhotoBrowser.podspec; path = ../KSPhotoBrowser.podspec; sourceTree = "<group>"; };
+		4E0A14EFB687307A0833E979 /* KSMWPhotoBrowser.podspec */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = KSMWPhotoBrowser.podspec; path = ../KSMWPhotoBrowser.podspec; sourceTree = "<group>"; };
 		55FB80F68E2309E256BC3FAD /* libPods-MWPhotoBrowser_Example.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-MWPhotoBrowser_Example.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		6003F58A195388D20070C39A /* MWPhotoBrowser_Example.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MWPhotoBrowser_Example.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		6003F58D195388D20070C39A /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -158,7 +158,7 @@
 		6003F581195388D10070C39A = {
 			isa = PBXGroup;
 			children = (
-				4E0A14EFB687307A0833E979 /* KSPhotoBrowser.podspec */,
+				4E0A14EFB687307A0833E979 /* KSMWPhotoBrowser.podspec */,
 				B5C85CB7FE89F584D392C9CF /* README.md */,
 				42FCB8D314CA85E2DF2C6434 /* LICENSE */,
 				6003F593195388D20070C39A /* Example */,
@@ -259,7 +259,6 @@
 				6003F586195388D20070C39A /* Sources */,
 				6003F587195388D20070C39A /* Frameworks */,
 				6003F588195388D20070C39A /* Resources */,
-				31CD744D3774FB16B35AEE97 /* [CP] Embed Pods Frameworks */,
 				28C076BE3D1828214BBF6CB2 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
@@ -280,7 +279,6 @@
 				6003F5AB195388D20070C39A /* Frameworks */,
 				6003F5AC195388D20070C39A /* Resources */,
 				5DBA98745AADA569D72D6A68 /* [CP] Embed Pods Frameworks */,
-				8AF94CD01592272065BA84F7 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -373,30 +371,15 @@
 			);
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-MWPhotoBrowser_Example/Pods-MWPhotoBrowser_Example-resources.sh",
-				"$PODS_CONFIGURATION_BUILD_DIR/KSPhotoBrowser-library/KSPhotoBrowser.bundle",
+				"${PODS_CONFIGURATION_BUILD_DIR}/KSMWPhotoBrowser-library/KSMWPhotoBrowser.bundle",
 			);
 			name = "[CP] Copy Pods Resources";
 			outputPaths = (
-				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/KSMWPhotoBrowser.bundle",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-MWPhotoBrowser_Example/Pods-MWPhotoBrowser_Example-resources.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		31CD744D3774FB16B35AEE97 /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-MWPhotoBrowser_Example/Pods-MWPhotoBrowser_Example-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		5DBA98745AADA569D72D6A68 /* [CP] Embed Pods Frameworks */ = {
@@ -407,23 +390,21 @@
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-MWPhotoBrowser_Tests/Pods-MWPhotoBrowser_Tests-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/DACircularProgress-framework/DACircularProgress.framework",
-				"${BUILT_PRODUCTS_DIR}/KSPhotoBrowser-framework/KSPhotoBrowser.framework",
+				"${BUILT_PRODUCTS_DIR}/KSMWPhotoBrowser-framework/KSMWPhotoBrowser.framework",
 				"${BUILT_PRODUCTS_DIR}/MBProgressHUD-framework/MBProgressHUD.framework",
 				"${BUILT_PRODUCTS_DIR}/SDWebImage-framework/SDWebImage.framework",
 				"${BUILT_PRODUCTS_DIR}/Expecta/Expecta.framework",
 				"${BUILT_PRODUCTS_DIR}/Expecta+Snapshots/Expecta_Snapshots.framework",
-				"${BUILT_PRODUCTS_DIR}/FBSnapshotTestCase/FBSnapshotTestCase.framework",
 				"${BUILT_PRODUCTS_DIR}/Specta/Specta.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/DACircularProgress.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/KSPhotoBrowser.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/KSMWPhotoBrowser.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/MBProgressHUD.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SDWebImage.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Expecta.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Expecta_Snapshots.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FBSnapshotTestCase.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Specta.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -447,24 +428,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
-			showEnvVarsInLog = 0;
-		};
-		8AF94CD01592272065BA84F7 /* [CP] Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-				"${SRCROOT}/Pods/Target Support Files/Pods-MWPhotoBrowser_Tests/Pods-MWPhotoBrowser_Tests-resources.sh",
-				"$PODS_CONFIGURATION_BUILD_DIR/KSPhotoBrowser-iOS7.1/KSPhotoBrowser.bundle",
-			);
-			name = "[CP] Copy Pods Resources";
-			outputPaths = (
-				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-MWPhotoBrowser_Tests/Pods-MWPhotoBrowser_Tests-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		F43B7032573079C0A446927C /* [CP] Check Pods Manifest.lock */ = {
@@ -618,7 +581,6 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "MWPhotoBrowser/MWPhotoBrowser-Prefix.pch";
 				INFOPLIST_FILE = "MWPhotoBrowser/MWPhotoBrowser-Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				MODULE_NAME = ExampleApp;
 				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.demo.${PRODUCT_NAME:rfc1034identifier}";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -635,7 +597,6 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "MWPhotoBrowser/MWPhotoBrowser-Prefix.pch";
 				INFOPLIST_FILE = "MWPhotoBrowser/MWPhotoBrowser-Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				MODULE_NAME = ExampleApp;
 				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.demo.${PRODUCT_NAME:rfc1034identifier}";
 				PRODUCT_NAME = "$(TARGET_NAME)";

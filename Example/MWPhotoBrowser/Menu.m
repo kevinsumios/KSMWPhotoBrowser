@@ -1114,7 +1114,7 @@
     self.thumbs = thumbs;
 	
 	// Create browser
-    KSPhotoBrowser *browser = [[KSPhotoBrowser alloc] initWithDelegate:self];
+    KSMWPhotoBrowser *browser = [[KSMWPhotoBrowser alloc] initWithDelegate:self];
     browser.displayActionButton = displayActionButton;
     browser.displayTrashButton = displayTrashButton;
     browser.displayNavArrows = displayNavArrows;
@@ -1183,9 +1183,9 @@
 
 }
 
-#pragma mark - KSPhotoBrowserDelegate
+#pragma mark - KSMWPhotoBrowserDelegate
 
-- (void)ksPhotoBrowser:(KSPhotoBrowser *)photoBrowser trashButtonPressedForPhotoAtIndex:(NSUInteger)index {
+- (void)ksPhotoBrowser:(KSMWPhotoBrowser *)photoBrowser trashButtonPressedForPhotoAtIndex:(NSUInteger)index {
     UIAlertController *alert = [UIAlertController alertControllerWithTitle:@"Trash button click!" message:[NSString stringWithFormat:@"index: %lu", index] preferredStyle:UIAlertControllerStyleAlert];
     [alert addAction:[UIAlertAction actionWithTitle:@"cancel" style:UIAlertActionStyleCancel handler:nil]];
     [self presentViewController:alert animated:true completion:nil];

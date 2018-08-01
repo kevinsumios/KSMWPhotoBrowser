@@ -1,21 +1,21 @@
 //
-//  KSPhotoBrowser.m
+//  KSMWPhotoBrowser.m
 //
 //  Created by Kevin Sum on 18/07/2018.
 //  Copyright © 2018 Kevin Sum. All rights reserved.
 //
 
-#import "KSPhotoBrowser.h"
+#import "KSMWPhotoBrowser.h"
 
-@interface KSPhotoBrowser ()
+@interface KSMWPhotoBrowser ()
 
 @property (nonatomic) UIActivityViewController *activityViewController;
 
 @end
 
-@implementation KSPhotoBrowser
+@implementation KSMWPhotoBrowser
 
-- (id)initWithDelegate:(id<KSPhotoBrowserDelegate>)delegate {
+- (id)initWithDelegate:(id<KSMWPhotoBrowserDelegate>)delegate {
     self._delegate = delegate;
     self.displayShareButton = YES;
     self.displayTrashButton = YES;

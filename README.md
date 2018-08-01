@@ -1,4 +1,4 @@
-# MWPhotoBrowser
+# KSMWPhotoBrowser
 A clone project from [MWPHhotoBrowser](https://raw.github.com/mwaterfall/MWPhotoBrowser) with update libraries supported and transh button added.
 
 ## A simple iOS photo and video browser with optional grid view, captions and selections.
@@ -203,7 +203,7 @@ MWPhotoBrowser is available through [CocoaPods](http://cocoapods.org). To instal
 it, simply add the following line to your Podfile:
 
 ```ruby
-pod "MWPhotoBrowser"
+pod "KSMWPhotoBrowser"
 ```
 
 
@@ -214,19 +214,21 @@ To run the example project, clone the repo, and run `pod install` from the Examp
 Then import the photo browser into your source files (or into your bridging header if you're using with Swift and not using frameworks with Cocoapods):
 
 ```obj-c
-#import "MWPhotoBrowser.h"
+#import "KSMWPhotoBrowser.h"
 ```
 
 If you are using Swift and frameworks, then you can just import the browser into your Swift source file:
 
 ```swift
-import MWPhotoBrowser
+import KSMWPhotoBrowser
 ```
 
 
 ## Author
 
 Michael Waterfall, michael@d3i.com
+
+extension by Kevin Sum, kevin-sum@hotmail.com
 
 
 ## License

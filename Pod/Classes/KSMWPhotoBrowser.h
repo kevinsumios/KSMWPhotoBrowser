@@ -1,5 +1,5 @@
 //
-//  PhotoBrowser.h
+//  KSMWPhotoBrowser.h
 //
 //  Created by Kevin Sum on 18/07/2018.
 //  Copyright © 2018 Kevin Sum. All rights reserved.
@@ -10,15 +10,15 @@
 
 #import "MWPhotoBrowser.h"
 
-@class KSPhotoBrowser;
+@class KSMWPhotoBrowser;
 
-@protocol KSPhotoBrowserDelegate <MWPhotoBrowserDelegate>
+@protocol KSMWPhotoBrowserDelegate <MWPhotoBrowserDelegate>
 @optional
-- (void)ksPhotoBrowser:(KSPhotoBrowser *)photoBrowser trashButtonPressedForPhotoAtIndex:(NSUInteger)index;
+- (void)ksPhotoBrowser:(KSMWPhotoBrowser *)photoBrowser trashButtonPressedForPhotoAtIndex:(NSUInteger)index;
 @end
 
-@interface KSPhotoBrowser : MWPhotoBrowser
-@property (nonatomic) id<KSPhotoBrowserDelegate> _delegate;
+@interface KSMWPhotoBrowser : MWPhotoBrowser
+@property (nonatomic) id<KSMWPhotoBrowserDelegate> _delegate;
 @property (nonatomic) UIBarButtonItem *shareButton;
 @property (nonatomic) UIBarButtonItem *trashButton;
 @property (nonatomic) BOOL displayShareButton;
