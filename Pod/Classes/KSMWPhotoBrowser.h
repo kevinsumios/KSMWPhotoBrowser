@@ -14,7 +14,7 @@
 
 @protocol KSMWPhotoBrowserDelegate <MWPhotoBrowserDelegate>
 @optional
-- (void)ksPhotoBrowser:(KSMWPhotoBrowser *)photoBrowser trashButtonPressedForPhotoAtIndex:(NSUInteger)index;
+- (void)KSMWPhotoBrowser:(KSMWPhotoBrowser *)photoBrowser trashButtonPressedForPhotoAtIndex:(NSUInteger)index;
 @end
 
 @interface KSMWPhotoBrowser : MWPhotoBrowser

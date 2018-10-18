@@ -53,14 +53,11 @@
 }
 
 #pragma mark - Actions
-#pragma clang diagnostic push
-#pragma clang diagnostic ignored "-Wundeclared-selector"
 - (void)trashButtonPressed:(id)sender {
-    if ([self._delegate respondsToSelector:@selector(photoBrowser:trashButtonPressedForPhotoAtIndex:)]) {
-        [self._delegate ksPhotoBrowser:self trashButtonPressedForPhotoAtIndex:self.currentIndex];
+    if ([self._delegate respondsToSelector:@selector(KSMWPhotoBrowser:trashButtonPressedForPhotoAtIndex:)]) {
+        [self._delegate KSMWPhotoBrowser:self trashButtonPressedForPhotoAtIndex:self.currentIndex];
     }
 }
-#pragma clang diagnostic pop
 
 - (void)shareButtonPressed:(id)sender {
     // Only react when image has loaded
